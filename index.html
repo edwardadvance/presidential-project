@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <title>Presidential Portraits</title>
+    <style>
+   /* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+model-viewer {
+    width: 100%;
+    height: 500px;
+    background-color: #f0f0f0;
+  }
+
+/* Navigation */
+nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem;
+    z-index: 1000;
+}
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 1rem;
+}
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Hero Section */
+#hero {
+    background: url('Hero_image.png') no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+#hero h1 {
+    font-size: 3rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+}
+
+/* Content Sections */
+section {
+    padding: 60px 20px;
+    margin: 50px auto;
+    max-width: 1200px;
+    text-align: center;
+}
+#introduction, .artifact {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+#introduction img, .artifact img {
+    max-width: 300px;
+    margin: 20px;
+}
+#introduction .text, .artifact .text {
+    max-width: 600px;
+    padding: 20px;
+    text-align: left;
+}
+.aj1:hover, .aj2:hover, .aj3:hover, .gw1:hover, .gw2:hover, .gw3:hover, .rh1:hover, .rh2:hover, .rh3:hover {
+     transform: scale(2,2);
+}
+.gwm:hover, .ajm:hover, .rhm:hover{
+    transform: scale(1,1);
+}
+
+/* Gallery */
+.artifact .gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.artifact .gallery img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #000;
+    color: white;
+    padding: 10px 0;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items:center;
+        padding: 1rem;
+        
+    }
+    nav a {
+        margin: 5px 0;
+        margin-left: 25px;
+    }
+
+    #hero h1 {
+        font-size: 2rem;
+        padding: 20px;
+    }
+
+    #introduction, .artifact {
+        flex-direction: column;
+    }
+    #introduction img, .artifact img {
+        max-width: 100%;
+        margin: 10px 0;
+    }
+    #introduction .text, .artifact .text {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .artifact .gallery img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        padding: 0.5rem;
+    }
+    nav a {
+        font-size: 0.9rem;
+    }
+
+    #hero h1 {
+        font-size: 1.5rem;
+    }
+
+    section {
+        padding: 30px 10px;
+    }
+
+    .artifact .gallery img {
+        width: 130px;
+        height: 130px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#hero">Home</a>
+        <a href="#introduction">About Us</a>
+        <a href="#artifact1">Andrew Jackson</a>
+        <a href="#artifact2">Rutherford Hayes</a>
+        <a href="#artifact3">George Washington</a>
+    </nav>
+
+    <section id="hero">
+        <h1>Presidential Portraits</h1>
+    </section>
+    
+    <section id="introduction">
+        <img src="intro-Camera.png" alt="Space image">
+        <div class="text" style="background-color: #D3D3D3;">
+            <h2>About Us</h2>
+            <p>Step into the world of history and artistry with our Presidential Portraits collection. This digital gallery offers an immersive exploration of the iconic representations of U.S. presidents, featuring 3D scans, high-resolution images, and detailed information about each portrait. From the classical brushstrokes of early leaders to contemporary interpretations, the collection celebrates the intersection of art, politics, and culture.
+
+                Dive into the stories behind each portrait—how they were created, their historical significance, and their role in shaping the visual legacy of leadership in America. Whether you're an art enthusiast, history buff, or student, this collection provides a unique opportunity to engage with the figures who have defined the nation's history in a profoundly personal and creative way.
+                
+                Discover the artistry, symbolism, and evolving traditions of presidential portraiture, and gain a deeper appreciation for the narratives these artworks tell about the nation's past, present, and future.</p>
+        </div>
+    </section>
+    <section id="artifact2" class="artifact">
+        <div class="text">
+            <h2>Rutherford B. Hayes (1877-1881)</h2>
+            <p>Rutherford B. Hayes, the 19th president of the United States, served from 1877 to 1881. His presidency is best known for ending the Reconstruction Era through the Compromise of 1877, which resolved the disputed 1876 election. Hayes advocated for civil service reform, equal treatment of all races, and efforts to reconcile a nation divided by the Civil War. Despite his single term in office, Hayes laid the groundwork for modernizing the federal government and fostering unity during a transformative period in American history.</p>
+            <audio controls>
+                <source src="A1.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+              </audio>     
+        </div>
+         <img src="RH.jpg" alt="Artifact 2">
+         <div class="column">
+            <model-viewer
+              src="rutherford-b-150k-4096.glb"
+              ar
+              camera-controls
+              poster="poster.webp"
+              alt="A 3D model of an astronaut"
+              auto-rotate
+            >
+            </model-viewer>
+          </div>
+
+        <img class="rhm" src="A2-Camera.png" alt="Artifact 2">
+        <div class="gallery">
+            <img class="rh1" src="A2 CV-Camera.png" alt="Detail 1">
+            <img class="rh2" src="A2 CV-Camera 2.png" alt="Detail 2">
+            <img class="rh3" src="A2 CV-Camera 3.png" alt="Detail 3">
+        </div>
+    </section>
+
+    <section id="artifact1" class="artifact">
+      
+        <div class="text">
+            <h2>Andrew Jackson (1829-1837)</h2>
+            <p>Andrew Jackson, the 7th president of the United States, served from 1829 to 1837. Known as the "People's President," Jackson was a populist leader who championed the common man and sought to expand democratic participation. His presidency marked the rise of Jacksonian Democracy and was characterized by controversial policies, including the Indian Removal Act and his opposition to the National Bank. A war hero from the Battle of New Orleans during the War of 1812, Jackson's legacy is a blend of significant democratic reforms and contentious decisions that continue to spark debate.</p>
+            <audio controls>
+                <source src="A3.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+              </audio>    
+        </div>
+        <img src="AJ.webp" alt="Artifact 1">
+        <img class="ajm" src="A1-Camera.png" alt="Artifact 1">
+        <model-viewer
+        src="andrew-jackson-zinc-sculpture-150k-4096.glb" 
+        ar
+        camera-controls 
+        poster="poster.webp"
+        auto-rotate>
+        <button class="Hotspot" slot="hotspot-3" data-position="-9.140168991045286m -231.47501431874946m 238.04403022653105m" data-normal="-0.10124783986502135m 0.8240458448909374m 0.5574022967665706m" data-visibility-attribute="visible">
+            <div class="HotspotAnnotation">seventh president of the United States</div>
+        </button><button class="Hotspot" slot="hotspot-4" data-position="39.931366318174014m 166.11536907634337m -32.7847555226881m" data-normal="0.7527999345236974m 0.40277451616293386m 0.5206389802068526m" data-visibility-attribute="visible">
+            <div class="HotspotAnnotation">Andrew Jackson was born on March 15, 1767</div>
+        </button><button class="Hotspot" slot="hotspot-5" data-position="-61.67571985751488m -2.1009959972855086m 54.64946160159809m" data-normal="-0.9726404999326324m -0.07992346093404393m 0.21813458754430337m" data-visibility-attribute="visible">
+            <div class="HotspotAnnotation">Jackson became a member of the Democratic-Republican Party, the dominant party in Tennessee.</div>
+        </button>
+
+        </model-viewer>
+
+        <div class="gallery">
+            <img class="aj1" src="A1 CV-Camera.png" alt="Detail 1">
+            <img class="aj2" src="A1 CV-Camera 2.png" alt="Detail 2">
+            <img class="aj3" src="A1 CV-Camera 3.png" alt="Detail 3">
+        </div>
+
+
+    </section>
+
+    
+
+</section>
+
+<section id="artifact3" class="artifact">
+    <div class="text">
+        <h2>George Washington (1789-1797)</h2>
+        <p>George Washington, the 1st president of the United States, served from 1789 to 1797. Often called the "Father of His Country," Washington set the precedent for the presidency, shaping the office's role and powers. A revered leader during the American Revolution, he guided the nation through its formative years, emphasizing unity, neutrality in foreign affairs, and the importance of a strong federal government. His leadership and integrity continue to symbolize the principles upon which the United States was founded.</p>
+        <audio controls>
+            <source src="A2.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+          </audio>    
+    </div>
+    <img src="GW.jpg" alt="Artifact 2">
+    <img class="gwm" src="A3-Camera.png" alt="Artifact 2">
+    <div class="gallery">
+        <img class="gw1" src="A3 CV-Camera.png" alt="Detail 1">
+        <img class="gw2" src="A3 CV-Camera 2.png" alt="Detail 2">
+        <img class="gw3"  src="A3 CV-Camera 3.png" alt="Detail 3">
+    </div>
+
+
+</section>
+
+
+
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Presidential Portraits. A project in Advance Multimedia Technology. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
